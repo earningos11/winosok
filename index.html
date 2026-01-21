@@ -5,111 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Online Opportunity</title>
 
-  <!-- Preview -->
-  <meta property="og:title" content="Explore a New Online Opportunity">
-  <meta property="og:description" content="Learn more about an available opportunity. No commitment required.">
-  <meta property="og:image" content="https://modo3.com/thumbs/fit630x300/81043/1481118831/%D8%A3%D9%87%D9%85%D9%8A%D8%A9_%D8%A7%D9%84%D9%85%D8%A7%D9%84.jpg">
-
+  <!-- SEO / Preview -->
+  <meta content="https://modo3.com/thumbs/fit630x300/81043/1481118831/%D8%A3%D9%87%D9%85%D9%8A%D8%A9_%D8%A7%D9%84%D9%85%D8%A7%D9%84.jpg" property="og:image">
   <link rel="icon" href="https://modo3.com/thumbs/fit630x300/81043/1481118831/%D8%A3%D9%87%D9%85%D9%8A%D8%A9_%D8%A7%D9%84%D9%85%D8%A7%D9%84.jpg">
 
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      background: #f5f6fa;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 600px;
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: center;
-    }
-
-    img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 15px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      color: #555;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #1877f2;
-      color: #fff;
-      padding: 14px 30px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #145dbf;
-      transform: scale(1.03);
-    }
-
-    .footer {
-      margin-top: 25px;
-      font-size: 12px;
-      color: #888;
-    }
-
-    .footer a {
-      color: #888;
-      text-decoration: none;
-      margin: 0 5px;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Cairo', sans-serif; }
+    body { background:url('https://i.imgur.com/gDeHz6O.jpg') no-repeat center center fixed; background-size:cover; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh; direction:ltr;}
+    #wrapper { width:100%; max-width:600px; padding:15px; }
+    #box { background: rgba(0,0,0,0.7); border-radius:15px; padding:20px; text-align:center; }
+    img { max-width:100%; border-radius:10px; margin-bottom:15px; }
+    h2 { font-size:20px; margin-bottom:15px; color:#fff; }
+    .answer { background:#28a745; margin:10px auto; padding:12px; border-radius:6px; cursor:pointer; transition:0.3s; width:90%; max-width:400px; font-weight:600; color:#fff; font-size:16px; }
+    .answer:hover { background:#218838; transform:scale(1.05); }
+    .question { display:none; }
+    .question.active { display:block; }
+    #progress { height:6px; background:#28a745; width:0%; margin-bottom:15px; border-radius:10px; transition:0.3s; }
+    a { color:#fff; text-decoration:none; margin:0 5px; font-size:14px;}
+    .footer { margin-top:20px; font-size:14px; color:#ccc; }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+<div id="wrapper">
+  <div id="box">
+
+    <div id="progress"></div>
+
     <img src="https://modo3.com/thumbs/fit630x300/81043/1481118831/%D8%A3%D9%87%D9%85%D9%8A%D8%A9_%D8%A7%D9%84%D9%85%D8%A7%D9%84.jpg" alt="Opportunity">
 
-    <h1>Explore a New Online Opportunity</h1>
+    <!-- Q1 -->
+    <div class="question active">
+      <h2>Are you interested in learning about an online opportunity?</h2>
+      <div class="answer" data-next="1">Yes</div>
+      <div class="answer" data-next="1">No</div>
+    </div>
 
-    <p>
-      We are sharing information about an available online opportunity.
-      Participation is optional and subject to individual eligibility.
-      No guarantees or commitments are required.
-    </p>
+    <!-- Q2 -->
+    <div class="question">
+      <h2>Are you over 18 years old?</h2>
+      <div class="answer" data-next="2">Yes</div>
+      <div class="answer" data-next="2">No</div>
+    </div>
 
-    <a class="btn" href="https://get.newgoua.xyz/?utm_medium=9efd424b20637a7ade55e9dc5a26f90b62437890&utm_campaign=vmoina">
-      Learn More
-    </a>
+    <!-- Q3 -->
+    <div class="question">
+      <h2>Do you have experience in online tools or work?</h2>
+      <div class="answer" data-next="3">Yes</div>
+      <div class="answer" data-next="3">No</div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="question">
+      <h2>How much time can you dedicate each day?</h2>
+      <div class="answer" data-next="4">1-2 Hours</div>
+      <div class="answer" data-next="4">3-5 Hours</div>
+      <div class="answer" data-next="4">More than 5 hours</div>
+    </div>
+
+    <!-- Final -->
+    <div class="question">
+      <h2>Thank you for your interest!</h2>
+      <p>Click below to continue and learn more about the opportunity.</p>
+      <div class="answer" id="final">Continue</div>
+    </div>
 
     <div class="footer">
-      <a href="#">Privacy Policy</a> |
-      <a href="#">Terms</a> |
-      <a href="#">Contact</a>
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms & Conditions</a> |
+      <a href="contact.html">Contact Us</a>
     </div>
+
   </div>
+</div>
+
+<script>
+  const questions = document.querySelectorAll('.question');
+  const answers = document.querySelectorAll('.answer');
+  const progress = document.getElementById('progress');
+  let step = 0;
+
+  answers.forEach(btn => {
+    btn.onclick = () => {
+      if (btn.id === 'final') {
+        // ضع رابط CPA هنا
+        window.location.href = "https://go.boosthq2.online/?utm_medium=c29cdcf02893962499e00e218c901cb5b3f24f15&utm_campaign=mo2026";
+        return;
+      }
+      questions[step].classList.remove('active');
+      step++;
+      questions[step].classList.add('active');
+      progress.style.width = ((step) / (questions.length - 1)) * 100 + "%";
+    };
+  });
+
+  // Disable back
+  history.pushState(null, null, location.href);
+  window.onpopstate = () => history.go(1);
+</script>
 
 </body>
 </html>
